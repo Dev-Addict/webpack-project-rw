@@ -6,7 +6,9 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && webpack",
-    "serve": "webpack-dev-server"
+    "build:prod": "SET NODE_ENV=production npm run clean && webpack -p",
+    "serve": "webpack-dev-server",
+    "deploy:surge": "npm run build:prod && surge -p dist"
   },
   "repository": "https://github.com/StephenGrider/WebpackProject",
   "author": "",
