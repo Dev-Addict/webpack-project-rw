@@ -8,7 +8,8 @@
     "build": "npm run clean && webpack",
     "build:prod": "SET NODE_ENV=production npm run clean && webpack -p",
     "serve": "webpack-dev-server",
-    "deploy:surge": "npm run build:prod && surge -p dist"
+    "deploy:surge": "npm run build:prod && surge -p dist",
+    "deploy:github": "npm run build:prod && git subtree push --prefix dist origin gh-pages"
   },
   "repository": "https://github.com/StephenGrider/WebpackProject",
   "author": "",
